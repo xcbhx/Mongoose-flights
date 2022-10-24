@@ -4,8 +4,15 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
+// It's very important to require dotenv before any
+//modules that depends upon the environment variables
+// in the .env file
+require('dotenv').config();
+// Coneect tp Atlas/MongoDB AFTER the dotenv has processed
+require('./config/database');
+
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+var flightsRouter = require('./routes/flights');
 
 var app = express();
 
@@ -20,7 +27,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
+app.use('/flights', flightsRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

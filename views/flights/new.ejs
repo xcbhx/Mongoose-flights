@@ -1,0 +1,30 @@
+<%- include('../partials/header') %>
+
+<h2>Enter a New Flight</h2>
+<form action="/flights" method="POST">
+  <label>Airline:
+    <select name="airline">
+        <option value="American">American</option>
+        <option value="Delta">Delta</option>
+        <option value="SouthWest">Southwest</option>
+      </select>
+  </label><br>
+  <label>Airport:
+    <select name="airport">
+        <option value="JFK">JFK</option>
+        <option value="LGA">LGA</option>
+        <option value="PBI">PBI</option>
+        <option value="GEO">GEO</option>
+        <option value="LAX">LAX</option>
+      </select>
+  </label><br>
+  <label>FlightNo:
+    <input required type="number" name="flightNo" pattern="[0-9]{4}" min="10" max="9999">
+  </label><br>
+  <label>Departs:
+    <input required type= "date" name="departs">
+  </label><br>
+  <button type="submit">Add New Flight</button>
+</form>
+
+<%- include('../partials/footer') %>
