@@ -23,9 +23,9 @@ function create(req, res) {
 }
 
 function newTicket(req, res) {
-    // res.render is looking at the view folder
-    res.render('tickets/new', {
+  // res.render is looking at the view folder
+  res.render('tickets/new', {
     title: 'Add Ticket',
     flightId: req.params.id
-      });
+  });
 }
