@@ -1,13 +1,19 @@
 * {
   box-sizing: border-box;
   font-family: Helvetica;
-  color: #424748;
+  color: #cf1111;
 }
 
 body {
   margin: 0;
   height: 100vh;
-  background-image: url(public/images/IMG_9737.jpg);
+  background-image: url("/images/IMG_9778.PNG");
+  background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }
-
-
